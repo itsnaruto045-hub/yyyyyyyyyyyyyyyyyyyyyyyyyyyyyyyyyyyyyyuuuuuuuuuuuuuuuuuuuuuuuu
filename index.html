@@ -1,0 +1,180 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPSCM — Cantonment Public School & College</title>
+<meta name="description" content="CPSCM — Modern school with Neon + Purple Nebula theme">
+<meta property="og:title" content="CPSCM — Cantonment Public School & College">
+<meta property="og:description" content="Neon + Purple Nebula themed single-page school website">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js" defer></script>
+<link rel="stylesheet" href="css/style.css">
+<meta name="color-scheme" content="dark">
+</head>
+<body class="dark">
+
+<noscript>
+  <div class="no-js-warning">JavaScript is required for nebula and interactions. Site still readable.</div>
+</noscript>
+
+<canvas id="nebula-canvas" aria-hidden="true"></canvas>
+
+<header class="site-header" id="top">
+<div class="container navcontainer">
+  <a class="brand" href="#hero">CPSCM</a>
+  <nav class="main-nav" aria-label="Main Navigation">
+    <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+    <ul id="nav-list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#academic">Academics</a></li>
+      <li><a href="#admissions">Admissions</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button id="mode-toggle" aria-pressed="false" title="Toggle dark/neon mode">🌗</button>
+  </div>
+</div>
+</header>
+
+<main>
+<section id="hero" class="hero" role="region" aria-label="Hero Section">
+<div class="container hero-inner">
+<h1 class="neon display">CPSCM</h1>
+<p class="tagline">Cantonment Public School & College — Lighting the Path of Knowledge</p>
+<div class="hero-ctas">
+<a class="btn btn-primary" href="#admissions" id="apply-btn">Apply / Visit</a>
+<a class="btn btn-ghost" href="#about">Learn More</a>
+</div>
+<div class="counters" aria-hidden="false">
+<div class="counter"><span data-target="1200" class="count">0</span><small>Students</small></div>
+<div class="counter"><span data-target="85" class="count">0</span><small>Teachers</small></div>
+<div class="counter"><span data-target="50" class="count">0</span><small>Classes</small></div>
+</div>
+</div>
+</section>
+
+<section id="about" class="section" aria-labelledby="about-title">
+<div class="container">
+<h2 id="about-title">About Us</h2>
+<p class="lead">(Placeholder) CPSCM was founded... Replace this paragraph with actual school history and mission statement in English.</p>
+</div>
+</section>
+
+<section id="academic" class="section" aria-labelledby="academic-title">
+<div class="container">
+<h2 id="academic-title">Academics</h2>
+<div class="grid cols-3">
+<article class="card"><h3>Primary</h3><p>Overview of primary classes and curriculum.</p></article>
+<article class="card"><h3>Secondary</h3><p>Overview of secondary classes and curriculum.</p></article>
+<article class="card"><h3>Higher Secondary</h3><p>Higher secondary courses and details.</p></article>
+</div>
+</div>
+</section>
+
+<section id="admissions" class="section" aria-labelledby="admissions-title">
+<div class="container">
+<h2 id="admissions-title">Admissions</h2>
+<p class="lead">Fill the form below or schedule a visit.</p>
+<form id="admission-form" novalidate>
+<div class="form-row"><label for="name">Name</label><input id="name" name="name" required minlength="2" aria-required="true"></div>
+<div class="form-row"><label for="class">Class</label>
+<select id="class" name="class" required>
+<option value="">Select</option>
+<option>Primary</option>
+<option>Secondary</option>
+<option>Higher Secondary</option>
+</select>
+</div>
+<div class="form-row"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" pattern="^01[0-9]{9}$" placeholder="01XXXXXXXXX" required></div>
+<div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="4"></textarea></div>
+<div class="form-actions">
+<button type="submit" class="btn btn-primary">Submit</button>
+<button type="reset" class="btn btn-ghost">Reset</button>
+</div>
+</form>
+</div>
+</section>
+
+<section id="faculty" class="section" aria-labelledby="faculty-title">
+<div class="container">
+<h2 id="faculty-title">Faculty</h2>
+<p class="lead">Sample 6 teachers — replace images & bios.</p>
+<div class="grid cols-3 faculty-grid" role="list">
+<article class="teacher" role="listitem"><img src="assets/faculty-1.jpg" alt="Teacher A" loading="lazy"><h3>Prof. Smith</h3><small>Head Teacher</small></article>
+<article class="teacher" role="listitem"><img src="assets/faculty-2.jpg" alt="Teacher B" loading="lazy"><h3>Ms. Johnson</h3><small>Math Teacher</small></article>
+<article class="teacher" role="listitem"><img src="assets/faculty-3.jpg" alt="Teacher C" loading="lazy"><h3>Mr. Lee</h3><small>Science Teacher</small></article>
+<article class="teacher" role="listitem"><img src="assets/faculty-4.jpg" alt="Teacher D" loading="lazy"><h3>Ms. Davis</h3><small>English Teacher</small></article>
+<article class="teacher" role="listitem"><img src="assets/faculty-5.jpg" alt="Teacher E" loading="lazy"><h3>Mr. Brown</h3><small>History Teacher</small></article>
+<article class="teacher" role="listitem"><img src="assets/faculty-6.jpg" alt="Teacher F" loading="lazy"><h3>Ms. Wilson</h3><small>Bangla Teacher</small></article>
+</div>
+</div>
+</section>
+
+<section id="gallery" class="section" aria-labelledby="gallery-title">
+<div class="container">
+<h2 id="gallery-title">Gallery</h2>
+<p class="lead">Sample photos; click to view.</p>
+<div class="gallery-grid">
+<button class="gallery-item" data-src="assets/placeholder-1.png"><img src="assets/placeholder-1.png" loading="lazy" alt="Gallery 1"></button>
+<button class="gallery-item" data-src="assets/placeholder-2.png"><img src="assets/placeholder-2.png" loading="lazy" alt="Gallery 2"></button>
+<button class="gallery-item" data-src="assets/placeholder-1.png"><img src="assets/placeholder-1.png" loading="lazy" alt="Gallery 3"></button>
+</div>
+</div>
+</section>
+
+<section id="events" class="section" aria-labelledby="events-title">
+<div class="container">
+<h2 id="events-title">Events / Notices</h2>
+<div class="accordion">
+<div class="accordion-item">
+<button class="accordion-toggle" aria-expanded="false">Annual Sports Competition — Date</button>
+<div class="accordion-panel">Sample event details — replace with real info.</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-toggle" aria-expanded="false">Tutorial Camp — Date</button>
+<div class="accordion-panel">Sample notice details.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section" aria-labelledby="contact-title">
+<div class="container">
+<h2 id="contact-title">Contact</h2>
+<address>
+<p>Address: Cantonment, City, Bangladesh</p>
+<p>Phone: +880 91-61645</p>
+<p>Email: <a href="mailto:cpscmyn@gmail.com">cpscmyn@gmail.com</a></p>
+</address>
+<div class="map-placeholder" aria-hidden="true">[Google Maps placeholder]</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<div class="copyright neon-subtle">© SadaF — Copyright by SadaF</div>
+<div class="credits neon-subtle">TEAM % SDF&gt;_ — Owner: Sadaf — Portfolio: <a href="https://my.oninon.qzz.io" target="_blank" rel="noopener">https://my.oninon.qzz.io</a></div>
+</div>
+</footer>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-hidden="true" aria-label="Image viewer">
+<button class="lightbox-close" aria-label="Close">✕</button>
+<img class="lightbox-img" alt="Expanded image">
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
